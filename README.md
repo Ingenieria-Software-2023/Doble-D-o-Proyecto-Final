@@ -1,2 +1,2 @@
-# Doble-D-o-Proyecto-Final
+# Doble-Dúo-Proyecto-Final
 Repositorio del equipo Doble Dúo

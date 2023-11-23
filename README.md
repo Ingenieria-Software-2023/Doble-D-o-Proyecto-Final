@@ -2,6 +2,7 @@
 Repositorio del equipo Doble Dúo
 - [Metodologia](#Metodologia)
 - [Casos de uso](#Casos-de-uso)
+- [Arquitectura](#Arquitectura)
   
 ## Metodologia 
 Dada la naturaleza de los requerimientos presentados, una metodología de desarrollo ágil sería la más adecuada. Entre las metodologías Agiles, consideramos que Scrum es la mejor para este proyecto.
@@ -84,3 +85,33 @@ Descripción: Los usuarios podrán ajustar el tamaño de su bebida (pequeño, me
 #### Caso de Uso: Guardar Perfiles de Personalización
 
 Descripción: Los usuarios tendrán la opción de guardar perfiles de personalización para bebidas frecuentemente ordenadas. Por ejemplo, si un cliente siempre pide un café con leche de almendra y jarabe de vainilla, podrá guardar esta configuración como un perfil personalizado. Esto agiliza el proceso de pedido para futuras ocasiones, ya que pueden cargar rápidamente su configuración guardada.
+
+## Arquitectura
+La elección de una arquitectura de microservicios para el desarrollo de nuestra aplicación destinada a la cafetería de la universidad se basa en múltiples beneficios estratégicos y técnicos que esta arquitectura ofrece, especialmente adecuados para las necesidades dinámicas de nuestro entorno universitario.
+Necesitamos una arquitectura con ciertas características para que su desarrollo sea el óptimo:
+
+1.- Tenga un eficiente proceso de desarrollo: 
+La arquitectura de microservicios permite que diferentes equipos trabajen en distintos servicios de manera independiente, lo que es crucial para nuestro equipo de desarrollo, compuesto por cinco integrantes. Cada miembro puede enfocarse en un servicio específico, optimizando el tiempo de desarrollo y facilitando un despliegue continuo y eficiente.
+
+2.-Que se pueda subir fácilmente la información a la producción: 
+La cafetería tiene las bebidas dependiendo de la disponibilidad de ingredientes, además se generan nuevas bebidas dependiendo de la temporada en la que nos encontremos, se necesita que sea fácil de añadir la nueva información a la aplicación.
+
+3.-Que sea fácil de probar: 
+Para entregar un buen producto se debe hacer una serie de pruebas para probar la funcionalidad individual y global del producto, que este dividido en servicios hace más fácil esta serie de pruebas, además tiene una buena capacidad para manejar fallos de manera aislada. Un fallo en un servicio no compromete la integridad de la aplicación completa, asegurando una mayor disponibilidad y confiabilidad del sistema. 
+
+4.-Que pueda ser escalable: 
+Esto es particularmente importante para adaptarse a las variaciones en la demanda de los usuarios, que pueden fluctuar considerablemente, por ejemplo, durante los exámenes o eventos especiales en el campus, además de que la cantidad de posibles usuarios esta sujeta a la cantidad de estudiantes que ingreses y egresen de la universidad
+
+5.- Fácil de desarrollar: 
+Se tenía un tiempo limitado para entregar este proyecto, entonces se buscó que su desarrollo fuera fácil para poder agregar todas las funcionalidades que se necesitarán, además de que se obtendría un mejor resultado 
+
+6.-Mejorar la experiencia de ususario
+La arquitectura de microservicios nos permite realizar actualizaciones y mejoras con mínima interrupción para el usuario, lo que garantiza una experiencia de usuario fluida y continua.
+
+El siguiente diagrama es el que se utilizó como referencia para desarrollarlo, en donde los client requests se efectúan al ingresar a la aplicación, pedir una bebida o hacer el pago. De todas estos requests se van a responder en la aplicación con los diferentes servicios que se necesitan para dar estas funcionalidades.
+![image](https://github.com/Ingenieria-Software-2023/Doble-Duo-Proyecto-Final/assets/91972908/e0d16335-bb13-4ac6-a81e-633d5864cefd)
+
+ 
+
+
+

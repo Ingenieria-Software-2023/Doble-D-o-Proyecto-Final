@@ -109,6 +109,7 @@ Se tenía un tiempo limitado para entregar este proyecto, entonces se buscó que
 La arquitectura de microservicios nos permite realizar actualizaciones y mejoras con mínima interrupción para el usuario, lo que garantiza una experiencia de usuario fluida y continua.
 
 El siguiente diagrama es el que se utilizó como referencia para desarrollarlo, en donde los client requests se efectúan al ingresar a la aplicación, pedir una bebida o hacer el pago. De todas estos requests se van a responder en la aplicación con los diferentes servicios que se necesitan para dar estas funcionalidades.
+
 ![image](https://github.com/Ingenieria-Software-2023/Doble-Duo-Proyecto-Final/assets/91972908/e0d16335-bb13-4ac6-a81e-633d5864cefd)
 
  

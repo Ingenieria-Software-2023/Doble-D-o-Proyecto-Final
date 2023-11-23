@@ -1,1 +1,25 @@
+#+TITLE: Ingeniería de Software - Requerimientos funcionales
+
+* Requerimientos funcionales
+
+** Requerimiento funcional
+*** Menús *
+En este requerimiento funcional se enfoca en el despliegue de productos y categorías.
+Es importante mostrar de manera clara las distintas categorías de productos y todos 
+los productos disponibles para el cliente. 
+
+** Caso de uso:
+***Menú de categorías
+En este caso va a ser el menú de imágenes con las distintas categorías de productos 
+que se van a ofrecer (bebidas, paquetes, alimentos y snacks). Para este caso se van 
+a mostrar imágenes que se relacionen con la categoría y en el centro de la imagen el
+título de la categoría. Al darle click a la categoría deseada se redireccionará a la
+página con el menú de la categoría deseada.  
+
+***Menú de productos
+En este caso se va abrir una ventana dividida en 2 secciones. Del lado izquierdo se 
+mostrarán los artículos incluidos en carrito y del lado derecho todos los artículos 
+disponibles en la categoría antes seleccionada. Cada artículo se mostrará con una 
+imagen del producto y el nombre del producto. También, al darle click a la imagen 
+del producto se abrirá un menú para personalizar el producto seleccionado.
 

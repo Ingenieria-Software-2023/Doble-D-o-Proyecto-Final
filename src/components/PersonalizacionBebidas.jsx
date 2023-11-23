@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { ContextoBebidaSeleccionada } from "../BebidaSeleccionadaContext";
 import { ContextoOrden } from "../OrdenContexto";
+import "./PersonalizacionBebidas.css"; // Asegúrate de que el archivo CSS se importe correctamente
 
 const PersonalizacionBebidas = () => {
 	const { bebidaSeleccionada } = useContext(ContextoBebidaSeleccionada);
@@ -37,8 +38,6 @@ const PersonalizacionBebidas = () => {
 
 	return (
 		<div className="personalizacion-bebidas">
-			<h2>Personaliza tu bebida: {bebidaSeleccionada.nombre}</h2>
-
 			<div className="info-bebida">
 				<img
 					src={bebidaSeleccionada.imagen}
@@ -48,6 +47,9 @@ const PersonalizacionBebidas = () => {
 				<h2>{bebidaSeleccionada.nombre}</h2>
 				<p>Rating: {"★".repeat(bebidaSeleccionada.rating)}</p>
 				<p>Precio: ${bebidaSeleccionada.precio}</p>
+			</div>
+			<div className="formulario-orden">
+				<h2>Personaliza tu bebida: {bebidaSeleccionada.nombre}</h2>
 
 				{/* Selección de tamaño */}
 				<div>
@@ -88,7 +90,7 @@ const PersonalizacionBebidas = () => {
 
 				{/* Selección de edulcorante */}
 				<div>
-					<label htmlFor="edulcorante">Edulcorante:</label>
+					<label htmlFor="edulcorante">Endulzante:</label>
 					<select
 						id="edulcorante"
 						value={opcionesPersonalizacion.edulcorante}
@@ -102,15 +104,15 @@ const PersonalizacionBebidas = () => {
 				</div>
 
 				<button onClick={manejarAgregarOrden}>Añadir a la orden</button>
-
+				<br></br>
 				{/* Estado actual de la orden */}
-				<div>
+				<div className="orden-actual">
 					<h3>Orden actual:</h3>
 					{orden.length > 0 ? (
 						<ul>
 							{orden.map((item, index) => (
 								<li key={index}>
-									{item.nombre} - {item.opcionesPersonalizacion.tamano},{item.opcionesPersonalizacion.tipoLeche},
+									{item.nombre} - {item.opcionesPersonalizacion.tamano}, {item.opcionesPersonalizacion.tipoLeche},{" "}
 									{item.opcionesPersonalizacion.edulcorante}
 								</li>
 							))}

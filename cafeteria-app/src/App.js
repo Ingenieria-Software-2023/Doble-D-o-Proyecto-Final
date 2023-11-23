@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { BebidasProvider } from "./CatalogoBebidasContext";
+import Navbar from "./components/BarraNavegacion";
+import CatalogoBebidas from "./components/CatalogoBebidas";
+import MetodosPago from "./components/VentanaPago";
+import Retroalimentacion from "./components/VentanaRetroalimentacion";
+import PersonalizacionBebidas from "./components/PersonalizacionBebidas";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<BebidasProvider>
+			<div className="App">
+				<Navbar />
+				<CatalogoBebidas />
+				{/* <MetodosPago />
+				<Retroalimentacion />
+				<PersonalizacionBebidas /> */}
+			</div>
+		</BebidasProvider>
+	);
 }
 
 export default App;

@@ -1,13 +1,11 @@
 #+TITLE: Ingeniería de Software - Requerimientos funcionales
 
-* Requerimientos funcionales
-
 ** Menús
 En este requerimiento funcional se enfoca en el despliegue de productos y categorías.
 Es importante mostrar de manera clara las distintas categorías de productos y todos 
 los productos disponibles para el cliente. 
 
-** Caso de uso:
+## Caso de uso:
 *** Menú de categorías
 En este caso va a ser el menú de imágenes con las distintas categorías de productos 
 que se van a ofrecer (bebidas, paquetes, alimentos y snacks). Para este caso se van 
@@ -22,3 +20,63 @@ disponibles en la categoría antes seleccionada. Cada artículo se mostrará con
 imagen del producto y el nombre del producto. También, al darle click a la imagen 
 del producto se abrirá un menú para personalizar el producto seleccionado.
 
+*** Menú de personalización de producto
+Permite a los usuarios seleccionar opciones de personalización para el producto, como 
+el tamaño, sabor, azúcar, ingredientes específicos(alimentos), etc. Se mostrará el 
+precio final del producto. 
+
+** Gestión de carrito de compras
+Este es un requerimiento funcional para que la aplicación permita a los usuarios 
+gestionar eficazmente su carrito de compras, ofreciendo una experiencia intuitiva y 
+completa para asegurar una compra satisfactoria. Se enfoca en garantizar que los 
+usuarios puedan seleccionar, modificar y revisar los productos que desean comprar 
+de manera cómoda y efectiva.
+
+## Casos de uso:
+*** Agregado de productos al carrito
+Los usuarios deben poder agregar productos a su carrito desde diferentes partes de 
+la aplicación, como al explorar categorías de productos o al personalizar un articulo. 
+Debe existir una opción clara como un botón “Agregar al carrito”. Los usuarios deben
+recibir confirmación visual de que el producto se ha agregado al carrito.
+
+*** Visualización del carrito de compras
+Se debe proporcionar a los usuarios acceso rápido y sencillo a su carrito de compras 
+en cualquier momento. Debe mostrar una lista clara y detallada de los productos en el 
+carrito, incluyendo nombres, cantidades y precios individuales. El precio total actual 
+del carrito debe ser visible en todo momento. 
+
+*** Modificación del carrito, guardar y continuar comprando
+Los usuarios deben tener la capacidad de modificar su carrito. Pueden aumentar o 
+disminuir la cantidad de un producto, eliminar productos no deseados y actualizar 
+las preferencias de personalización. Se debe poder guardar su carrito y continuar 
+explorando la aplicación. El carrito guardado debe estar disponible para su 
+recuperación en futuras sesiones. 
+
+*** Finalización de la compra
+Cuando los usuarios estén listos para finalizar su compra, deben poder acceder al 
+carrito, revisar la lista de productos, confirmar los detalles y proceder al 
+proceso de pago. La interfaz debe ser clara y orientar al usuario a través del 
+proceso de finalización de la compra.
+
+** Requerimiento no funcional: Seguridad
+Este es un requerimiento no funcional que se enfoca en la seguridad del sistema.
+Es importante garantizar que el sistema sea seguro y proteja la información sensible
+de los usuarios.
+
+## Caso de uso:
+*** Al momento de hacer un sign-up a la página asegurarnos de que la contraseña sea segura.
+Este es un caso de uso que se relaciona con la funcionalidad de seguridad del sistema. 
+Específicamente, se refiere a la validación de contraseñas al registrarse. 
+Para cumplir con este caso de uso, el sistema debe implementar comprobaciones para garantizar 
+que las contraseñas cumplan con ciertos criterios de seguridad, como longitud, uso de caracteres
+especiales, letras mayúsculas y minúsculas, etc.
+
+*** Almacenar las contraseñas cifradas (pasar la contraseña a ASCII, sumarle 5 y regresarlo a string).
+Esta parte se refiere al enfoque de seguridad en el almacenamiento de contraseñas. 
+Al convertir las contraseñas a un formato diferente (en este caso, ASCII + suma + conversión a 
+cadena), se está aplicando una forma básica de cifrado o transformación para proteger las contraseñas almacenadas. 
+
+*** Decidir si cuando un usuario borra su cuenta vamos a almacenar su correo o algo para saber cuando tenemos un usuario de regreso o mandar correos para intentar recuperar al cliente.
+Esta es una consideración relacionada con la gestión de datos de usuarios y la retención de 
+información para fines de recuperación o reactivación de cuentas. Esto puede tener implicaciones 
+tanto en términos de seguridad como de privacidad. 

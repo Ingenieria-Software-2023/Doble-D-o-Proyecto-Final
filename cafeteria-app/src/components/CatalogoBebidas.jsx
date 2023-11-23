@@ -2,14 +2,16 @@ import React, { useContext } from "react";
 import "./CatalogoBebidas.css"; // Asegúrate de actualizar este archivo con nuevos estilos
 import { ContextoBebidas } from "../CatalogoBebidasContext";
 import { ContextoBebidaSeleccionada } from "../BebidaSeleccionadaContext";
+import { useNavigate } from "react-router-dom";
 
 const CatalogoBebidas = () => {
+	const navigate = useNavigate();
 	const { bebidas } = useContext(ContextoBebidas);
 	const { setBebidaSeleccionada } = useContext(ContextoBebidaSeleccionada);
 
 	const seleccionarBebida = (bebida) => {
 		setBebidaSeleccionada(bebida);
-		// Aquí puedes implementar la lógica de redirección si es necesario
+		navigate("/personalizacion"); // Navega a la ruta de personalización
 	};
 
 	return (

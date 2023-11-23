@@ -1,12 +1,19 @@
-import React from "react";
-import "./PersonalizacionBebidas.css";
+import React, { useContext } from "react";
+import { ContextoBebidaSeleccionada } from "../BebidaSeleccionadaContext";
 
-function PersonalizacionBebidas() {
+const PersonalizacionBebidas = () => {
+	const { bebidaSeleccionada } = useContext(ContextoBebidaSeleccionada);
+
+	if (!bebidaSeleccionada) {
+		return <div>Seleccione una bebida para personalizar.</div>;
+	}
+
 	return (
-		<div className="personalizacion-bebidas">
-			<h2>Personalización de Bebidas</h2>
+		<div>
+			<h2>Personaliza tu bebida: {bebidaSeleccionada.nombre}</h2>
+			{/* Más lógica de personalización aquí */}
 		</div>
 	);
-}
+};
 
 export default PersonalizacionBebidas;

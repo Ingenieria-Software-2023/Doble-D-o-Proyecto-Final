@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import { BebidasProvider } from "./CatalogoBebidasContext";
 import { BebidaSeleccionadaProvider } from "./BebidaSeleccionadaContext";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/BarraNavegacion";
 import CatalogoBebidas from "./components/CatalogoBebidas";
@@ -13,13 +14,25 @@ function App() {
 	return (
 		<BebidasProvider>
 			<BebidaSeleccionadaProvider>
-				<div className="App">
-					<Navbar />
-					<CatalogoBebidas />
-					{/* <MetodosPago />
+				<Router>
+					<Routes>
+						<Route
+							path="/"
+							element={<CatalogoBebidas />}
+						/>
+						<Route
+							path="/personalizacion"
+							element={<PersonalizacionBebidas />}
+						/>
+					</Routes>
+				</Router>
+				{/* <div className="App">
+					{/* <Navbar />
+					<CatalogoBebidas /> */}
+				{/* <MetodosPago />
 					<Retroalimentacion />
 					<PersonalizacionBebidas /> */}
-				</div>
+				{/* </div>*/}
 			</BebidaSeleccionadaProvider>
 		</BebidasProvider>
 	);

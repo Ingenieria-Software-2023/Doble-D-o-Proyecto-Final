@@ -1,7 +1,6 @@
 # Doble-Dúo-Proyecto-Final
 Repositorio del equipo Doble Dúo
 - [Metodologia](#Metodologia)
-- [Casos de uso](#Casos de uso)
 
 ## Metodologia 
 Dada la naturaleza de los requerimientos presentados, una metodología de desarrollo ágil sería la más adecuada. Entre las metodologías Agiles, consideramos que Scrum es la mejor para este proyecto.
@@ -43,3 +42,44 @@ Descripción: Este caso de uso es útil para los usuarios que desean buscar bebi
 
 Descripción: Este caso de uso ofrece una visión detallada de una bebida seleccionada, proporcionando información clave como descripción y precio. La inclusión de botones para agregar directamente al carrito y personalizar la bebida es una buena adición, ya que agiliza el proceso de pedido y permite opciones de personalización. Asegúrate de que la información presentada sea suficiente y relevante para el usuario.
 
+## Métodos de Pago: Al usuario se le presentaron 3 maneras principalmente de pagar su pedido: Pago con tarjeta, criptomonedas y efectivo.
+
+### Caso de Uso: Pago con Tarjeta
+
+Descripción: Este caso de uso es claro en cuanto a la opción de pago con tarjeta, ya sea ingresando nuevos datos bancarios o seleccionando una tarjeta previamente guardada. La posibilidad de guardar múltiples tarjetas y la activación de la casilla para futuras cuentas son características útiles y brindan flexibilidad al usuario.
+
+### Caso de Uso: Criptomonedas
+
+Descripción: Este caso de uso aborda la opción de pago con criptomonedas de manera efectiva. El proceso de redireccionar al usuario a una página de transferencia desde su propia billetera es una práctica común. La validación a través de la muestra de transferencia al recibir el café es un buen enfoque para garantizar la confirmación del pago.
+
+### Caso de Uso: Efectivo
+
+Descripción: Este caso de uso considera el pago en efectivo de manera práctica. El envío de un mensaje al cajero/cajera con la información del pedido y el nombre del usuario facilita la coordinación del pago.
+
+## Evaluación y Retroalimentación: se evaluarán distintas características como: atención, los productos ordenados, limpieza del lugar, tiempo de entrega, etc… También se le dará la opción de que deje una nota al final de la evaluación la cual será evaluada para mejorar nuestro servicio o mantenerlo en caso de que sea una evaluación positiva.
+
+### Caso de Uso: Evaluación mediante Notificación
+
+Descripción: Este caso de uso es efectivo al aprovechar el momento posterior a la entrega para solicitar la evaluación. La inclusión de diferentes parámetros a evaluar y la opción de agregar una nota adicional permiten recopilar información detallada sobre la experiencia del usuario. La retroalimentación constructiva y la posibilidad de mantener buenas prácticas son aspectos positivos.
+
+### Caso de Uso: Evaluación mediante Historial
+
+Descripción: Este caso de uso es práctico al proporcionar otra oportunidad para que los usuarios evalúen sus experiencias pasadas. Utilizar el historial de pedidos como punto de acceso es conveniente, ya que algunos usuarios podrían preferir evaluar después de haber tenido tiempo de reflexión. La consistencia en la encuesta de evaluación es una buena práctica.
+
+### Caso de Uso Adicional: Retroalimentación Personalizada
+
+Descripción: Los usuarios tendrán la opción de proporcionar retroalimentación personalizada en cualquier momento, no solo después de la entrega. En la sección de retroalimentación, podrán escribir comentarios específicos sobre aspectos que deseen destacar, sugerencias para mejorar, o cualquier otra información que deseen compartir. Esta retroalimentación personalizada se recopilará de manera anónima para su análisis.
+
+## Personalización de Bebidas:
+
+### Caso de Uso: Personalización de Ingredientes
+
+Descripción: Los usuarios podrán personalizar las bebidas seleccionando ingredientes específicos según sus preferencias. Por ejemplo, podrían elegir el tipo de leche (entera, descremada, vegetal), agregar algún saborizante o elegir entre opciones de azúcares. El sistema mostrará los cambios de precio en tiempo real a medida que el usuario personaliza su bebida.
+
+### Caso de Uso: Tamaño y Temperatura Personalizados
+
+Descripción: Los usuarios podrán ajustar el tamaño de su bebida (pequeño, mediano, grande) y especificar la temperatura deseada (caliente, frío, temperatura ambiente). El sistema adaptará automáticamente el precio según las elecciones del usuario. Esta personalización permite a los clientes tener mayor control sobre aspectos clave de su bebida.
+
+### Caso de Uso: Guardar Perfiles de Personalización
+
+Descripción: Los usuarios tendrán la opción de guardar perfiles de personalización para bebidas frecuentemente ordenadas. Por ejemplo, si un cliente siempre pide un café con leche de almendra y jarabe de vainilla, podrá guardar esta configuración como un perfil personalizado. Esto agiliza el proceso de pedido para futuras ocasiones, ya que pueden cargar rápidamente su configuración guardada.

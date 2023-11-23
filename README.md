@@ -1,7 +1,7 @@
 # Doble-Dúo-Proyecto-Final
 Repositorio del equipo Doble Dúo
 - [Metodologia](#Metodologia)
-- [Casos de uso](#Casos de uso)
+- [Casos de uso](#Casos-de-uso)
   
 ## Metodologia 
 Dada la naturaleza de los requerimientos presentados, una metodología de desarrollo ágil sería la más adecuada. Entre las metodologías Agiles, consideramos que Scrum es la mejor para este proyecto.

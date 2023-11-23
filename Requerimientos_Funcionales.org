@@ -5,7 +5,7 @@ En este requerimiento funcional se enfoca en el despliegue de productos y catego
 Es importante mostrar de manera clara las distintas categorías de productos y todos 
 los productos disponibles para el cliente. 
 
-## Caso de uso:
+*** Caso de uso:
 *** Menú de categorías
 En este caso va a ser el menú de imágenes con las distintas categorías de productos 
 que se van a ofrecer (bebidas, paquetes, alimentos y snacks). Para este caso se van 
@@ -32,7 +32,7 @@ completa para asegurar una compra satisfactoria. Se enfoca en garantizar que los
 usuarios puedan seleccionar, modificar y revisar los productos que desean comprar 
 de manera cómoda y efectiva.
 
-## Casos de uso:
+*** Casos de uso:
 *** Agregado de productos al carrito
 Los usuarios deben poder agregar productos a su carrito desde diferentes partes de 
 la aplicación, como al explorar categorías de productos o al personalizar un articulo. 
@@ -63,7 +63,7 @@ Este es un requerimiento no funcional que se enfoca en la seguridad del sistema.
 Es importante garantizar que el sistema sea seguro y proteja la información sensible
 de los usuarios.
 
-## Caso de uso:
+*** Caso de uso:
 *** Al momento de hacer un sign-up a la página asegurarnos de que la contraseña sea segura.
 Este es un caso de uso que se relaciona con la funcionalidad de seguridad del sistema. 
 Específicamente, se refiere a la validación de contraseñas al registrarse. 

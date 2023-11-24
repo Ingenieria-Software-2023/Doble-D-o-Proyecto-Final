@@ -3,7 +3,7 @@ Repositorio del equipo Doble Dúo
 - [Metodologia](#Metodologia)
 - [Casos de uso](#Casos-de-uso)
 - [Arquitectura](#Arquitectura)
-- [Código](#Código)
+- [Página](#Página)
 - [Presentación](#Presentación)
   
 ## Metodologia 
@@ -118,7 +118,7 @@ El siguiente diagrama es el que se utilizó como referencia para desarrollarlo, 
 
 https://docs.google.com/presentation/d/1f0TbVXTB654E0m12eRRr7xBGHUYxQ5HFJPCpvlkqKDE/edit#slide=id.p
 
-## Código
+## Página
 
 [cafeduo.netlify.app](https://cafeduo.netlify.app/)https://cafeduo.netlify.app/
 

@@ -101,7 +101,12 @@ const PersonalizacionBebidas = () => {
 					</select>
 				</div>
 
-				<button onClick={manejarAgregarOrden}>Añadir a la orden</button>
+				<button
+					className="botonAgregarBebida"
+					onClick={manejarAgregarOrden}
+				>
+					Añadir a la orden
+				</button>
 				<br></br>
 				{/* Estado actual de la orden */}
 				<div className="orden-actual-personalizacion">

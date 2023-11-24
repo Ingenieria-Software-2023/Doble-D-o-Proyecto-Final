@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ContextoOrden } from "../OrdenContexto";
+import "./VentanaPago.css";
 
 const VentanaPago = () => {
 	const navigate = useNavigate();
@@ -45,10 +46,26 @@ const VentanaPago = () => {
 	};
 
 	return (
-		<div>
+		<div className="ventana-pago">
 			{/* Resumen de la orden */}
-			<h2>Resumen de la Orden</h2>
-			{/* Aquí mostrarías la lista de la orden con sus precios */}
+
+			<div>
+				<h2>Resumen de la Orden</h2>
+				{orden.length > 0 ? (
+					<ul>
+						{orden.map((item, index) => (
+							<li key={index}>
+								{item.nombre} - {item.opcionesPersonalizacion.tamano}, {item.opcionesPersonalizacion.tipoLeche},{" "}
+								{item.opcionesPersonalizacion.edulcorante}
+								<br />
+								Precio: ${item.precio}
+							</li>
+						))}
+					</ul>
+				) : (
+					<p>No hay bebidas en tu pedido.</p>
+				)}
+			</div>
 			<p>Total a Pagar: ${totalPagar}</p>
 
 			{/* Selección del método de pago */}
@@ -67,7 +84,7 @@ const VentanaPago = () => {
 
 			{/* Formulario para pagos con tarjeta */}
 			{metodoPago === "tarjeta" && (
-				<div>
+				<div className="pagoTarjeta">
 					<input
 						name="numeroTarjeta"
 						value={datosTarjeta.numeroTarjeta}
@@ -102,7 +119,7 @@ const VentanaPago = () => {
 						<option value="solana">Solana</option>
 						<option value="ethereum">Ethereum</option>
 					</select>
-					{cryptoSeleccionada && <p>Dirección: {`hashed_address_for_${cryptoSeleccionada}`}</p>}
+					{cryptoSeleccionada && <p>Depositar a: {`3dvs9t45s34wet6b3dtg8${cryptoSeleccionada}`}</p>}
 				</div>
 			)}
 
@@ -115,7 +132,12 @@ const VentanaPago = () => {
 				Pagar
 			</button>
 
-			<button onClick={() => navigate("/retroalimentacion")}>Pagar</button>
+			<button
+				className="botonMenu"
+				onClick={() => navigate("/")}
+			>
+				Ir al menú
+			</button>
 		</div>
 	);
 };

@@ -49,3 +49,34 @@
 .info-bebida p {
 	margin: 5px 0;
 }
+
+.botonPagoMenu {
+	position: absolute;
+	right: 80px;
+	bottom: 80px;
+	padding: 10px 20px;
+	background-color: #4caf50;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	font-size: 1.2em;
+	cursor: pointer;
+}
+
+.logoDuo {
+	width: 150px;
+}
+
+.encabezado-menu h2 {
+	color: #04de04; /* This is a shade of green, adjust as needed */
+	margin-right: 10px; /* Add space between the title and the logo */
+}
+
+.encabezado-menu {
+	display: flex; /* Use flexbox for layout */
+	align-items: center; /* Center items vertically */
+	justify-content: center; /* Center items horizontally */
+	background-color: white; /* Or any color you wish for the background */
+	padding: 10px 0; /* Add some padding at the top and bottom */
+	position: relative; /* Needed for absolute positioning of the button */
+}

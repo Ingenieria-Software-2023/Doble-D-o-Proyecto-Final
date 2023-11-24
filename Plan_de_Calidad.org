@@ -1,6 +1,5 @@
 * Plan de Calidad - Aplicación de Cafetería Universitaria
 
-** Introducción
 La aplicación se desarrollará utilizando la metodología Scrum y una arquitectura de microservicios para proporcionar una experiencia óptima al usuario en la cafetería universitaria. El enfoque principal se centra en la usabilidad, personalización de bebidas, métodos de pago, evaluación continua y mantenimiento adaptable.
 
 ** Objetos de Prueba
@@ -33,7 +32,7 @@ La aplicación se desarrollará utilizando la metodología Scrum y una arquitect
 
 ** Criterios de Éxito/Fallo
 - Realización de Pruebas con un 95% de Éxito: Verificación de todas las funcionalidades principales y flujos de usuario.
-- Disponibilidad del 99.5% durante el Horario Laboral: Asegurar que la aplicación sea accesible en momentos críticos de la cafetería.
+- Disponibilidad del 99.5%: Asegurar que la aplicación sea accesible en momentos críticos de la cafetería.
 - Escalabilidad Comprobada con Aumento de Usuarios: Capacidad de la aplicación para manejar incrementos del 50% en el tráfico de usuarios.
 - Fiabilidad y Seguridad: Ausencia de fallos críticos y protección efectiva de la información del usuario.
 

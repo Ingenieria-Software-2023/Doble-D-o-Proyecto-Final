@@ -1,0 +1,43 @@
+* Plan de Calidad - Aplicación de Cafetería Universitaria
+
+** Introducción
+La aplicación se desarrollará utilizando la metodología Scrum y una arquitectura de microservicios para proporcionar una experiencia óptima al usuario en la cafetería universitaria. El enfoque principal se centra en la usabilidad, personalización de bebidas, métodos de pago, evaluación continua y mantenimiento adaptable.
+
+** Objetos de Prueba
+- Usabilidad en Múltiples Plataformas: Android e iOS.
+- Catálogo de Bebidas y Personalización: Presentación, buscador, detalles y capacidad de personalización.
+- Métodos de Pago: Tarjeta, criptomonedas y efectivo.
+- Evaluación y Retroalimentación: Encuestas, historial de pedidos y retroalimentación personalizada.
+- Arquitectura de Microservicios: Desarrollo independiente, pruebas y escalabilidad.
+
+** Eventos de Riesgo
+- Fluctuaciones de la Demanda: Aumentos repentinos de usuarios durante exámenes u eventos en el campus.
+- Errores en Métodos de Pago: Posibles fallos en la seguridad o procesamiento de transacciones.
+- Integración de Nuevas Bebidas: Problemas en la actualización y adición de nuevas bebidas al catálogo.
+
+** Funcionalidades a Probar
+- Usabilidad en Plataformas Múltiples: Verificar inicio de sesión, navegación y consistencia entre Android e iOS.
+- Catálogo de Bebidas y Personalización: Funcionalidad completa del catálogo, buscador y opciones de personalización.
+- Métodos de Pago: Validación de opciones de tarjeta, criptomonedas y efectivo.
+- Evaluación y Retroalimentación: Pruebas de encuestas, historial de pedidos y retroalimentación personalizada.
+- Arquitectura de Microservicios: Pruebas de funcionalidad, pruebas de escalabilidad y resistencia a fallos.
+
+** Funcionalidades que No se Van a Probar
+- Compatibilidad con Versiones Antiguas: Debido a la adopción de tecnologías actuales, no se probará en versiones de sistemas operativos obsoletos.
+
+** Estrategia
+- Realizar pruebas unitarias, de integración y de aceptación para cada funcionalidad desarrollada.
+- Implementar pruebas de carga y estrés para verificar la escalabilidad del sistema ante aumentos repentinos de usuarios.
+- Utilizar entornos de pruebas independientes para simular escenarios de riesgo y evaluar la fiabilidad y seguridad.
+- Establecer una estrategia de pruebas continuas durante el desarrollo, integrando la retroalimentación del usuario en cada iteración.
+
+** Criterios de Éxito/Fallo
+- Realización de Pruebas con un 95% de Éxito: Verificación de todas las funcionalidades principales y flujos de usuario.
+- Disponibilidad del 99.5% durante el Horario Laboral: Asegurar que la aplicación sea accesible en momentos críticos de la cafetería.
+- Escalabilidad Comprobada con Aumento de Usuarios: Capacidad de la aplicación para manejar incrementos del 50% en el tráfico de usuarios.
+- Fiabilidad y Seguridad: Ausencia de fallos críticos y protección efectiva de la información del usuario.
+
+** Escalabilidad, Fiabilidad y Seguridad
+- Escalabilidad: Garantizar la capacidad del sistema para escalar vertical y horizontalmente en respuesta a aumentos o disminuciones de usuarios.
+- Fiabilidad: Mantener una disponibilidad alta del sistema, minimizando tiempos de inactividad y errores.
+- Seguridad: Implementar medidas de seguridad robustas para proteger la información personal y financiera de los usuarios.

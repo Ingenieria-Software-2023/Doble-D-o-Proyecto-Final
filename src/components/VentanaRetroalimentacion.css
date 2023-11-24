@@ -1,0 +1,41 @@
+.ventana-retroalimentacion {
+	max-width: 600px;
+	margin: auto;
+	padding: 20px;
+}
+
+.item-retroalimentacion {
+	margin-bottom: 20px;
+}
+
+.item-retroalimentacion h3 {
+	margin-bottom: 5px;
+}
+
+.item-retroalimentacion textarea {
+	width: 100%;
+	height: 100px;
+	margin-bottom: 10px;
+}
+
+.estrellas {
+	cursor: pointer;
+}
+
+.estrellas span {
+	color: gold;
+	font-size: 25px;
+}
+
+.estrellas span.filled {
+	color: orange;
+}
+
+button {
+	padding: 10px 20px;
+	background-color: #4caf50;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}

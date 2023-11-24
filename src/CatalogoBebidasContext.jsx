@@ -9,6 +9,7 @@ const bebidas = [
 		precio: 50,
 		rating: 3,
 		imagen: require("./imgs/americano.png"),
+		infoNutricional: require(":/imgs/cafe_americano.jpeg")
 	},
 	{
 		id: 2,
@@ -17,6 +18,7 @@ const bebidas = [
 		precio: 78,
 		rating: 4,
 		imagen: require("./imgs/chocolateCanela.png"),
+		infoNutricional: require(":/imgs/chocolate_con_canela.jpeg")
 	},
 	{
 		id: 3,
@@ -25,6 +27,7 @@ const bebidas = [
 		precio: 70,
 		rating: 4,
 		imagen: require("./imgs/frappeOreo.png"),
+		infoNutricional: require(":/imgs/frappe_oreo.jpeg")
 	},
 	{
 		id: 4,
@@ -33,6 +36,7 @@ const bebidas = [
 		precio: 65,
 		rating: 5,
 		imagen: require("./imgs/capuchino.png"),
+		infoNutricional: require(":/imgs/capuccino.jpeg")
 	},
 	{
 		id: 5,
@@ -41,6 +45,7 @@ const bebidas = [
 		precio: 75,
 		rating: 4,
 		imagen: require("./imgs/matcha.png"),
+		infoNutricional: require(":/imgs/matcha.jpeg")
 	},
 	{
 		id: 6,
@@ -49,6 +54,7 @@ const bebidas = [
 		precio: 50,
 		rating: 3,
 		imagen: require("./imgs/infusionTe.png"),
+		infoNutricional: require(":/imgs/infusion_de_te.jpeg")
 	},
 ];
 

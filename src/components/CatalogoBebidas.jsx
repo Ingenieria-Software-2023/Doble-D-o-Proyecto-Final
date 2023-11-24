@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import "./CatalogoBebidas.css"; // Asegúrate de actualizar este archivo con nuevos estilos
+import { useNavigate } from "react-router-dom";
+import "./CatalogoBebidas.css";
 import { ContextoBebidas } from "../CatalogoBebidasContext";
 import { ContextoBebidaSeleccionada } from "../BebidaSeleccionadaContext";
-import { useNavigate } from "react-router-dom";
 import logoCafe from "../imgs/cafeDuo.png";
 
 const CatalogoBebidas = () => {

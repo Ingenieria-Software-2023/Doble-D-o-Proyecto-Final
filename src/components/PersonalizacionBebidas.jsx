@@ -137,12 +137,6 @@ const PersonalizacionBebidas = () => {
 					Ir al menú
 				</button>
 			</div>
-			<button
-				className="botonMenu"
-				onClick={() => navigate("/retroalimentacion")}
-			>
-				Calif
-			</button>
 		</div>
 	);
 };

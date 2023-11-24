@@ -16,7 +16,10 @@ const CrearCuenta = () => {
 	};
 
 	return (
-		<div className="form-container">
+		<div
+			className="form-container"
+			id="bienvenida"
+		>
 			<form
 				onSubmit={manejarCreacion}
 				className="formulario"

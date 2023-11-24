@@ -19,7 +19,10 @@ const InicioSesion = () => {
 	};
 
 	return (
-		<div className="form-container">
+		<div
+			className="form-container"
+			id="bienvenida"
+		>
 			<form
 				onSubmit={manejarInicioSesion}
 				className="formulario"

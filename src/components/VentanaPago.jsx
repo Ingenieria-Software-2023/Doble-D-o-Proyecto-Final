@@ -42,7 +42,6 @@ const VentanaPago = () => {
 	};
 
 	const handlePagar = () => {
-		// Aquí colocarías la lógica de pago o redirección a otra página
 		alert("Procesando pago...");
 		// Redirección a retroalimentación
 		window.location.href = "/retroalimentacion";

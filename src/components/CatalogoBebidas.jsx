@@ -15,25 +15,33 @@ const CatalogoBebidas = () => {
 	};
 
 	return (
-		<div className="grid-container">
-			{bebidas.map((bebida) => (
-				<div
-					key={bebida.id}
-					className="grid-item"
-					onClick={() => seleccionarBebida(bebida)}
-				>
-					<img
-						src={bebida.imagen}
-						alt={bebida.nombre}
-						className="imagen-bebida"
-					/>
-					<div className="info-bebida">
-						<h3>{bebida.nombre}</h3>
-						<p>{"★".repeat(bebida.rating) + "☆".repeat(5 - bebida.rating)}</p>
-						<p>${bebida.precio}</p>
+		<div>
+			<div className="grid-container">
+				{bebidas.map((bebida) => (
+					<div
+						key={bebida.id}
+						className="grid-item"
+						onClick={() => seleccionarBebida(bebida)}
+					>
+						<img
+							src={bebida.imagen}
+							alt={bebida.nombre}
+							className="imagen-bebida"
+						/>
+						<div className="info-bebida">
+							<h3>{bebida.nombre}</h3>
+							<p>{"★".repeat(bebida.rating) + "☆".repeat(5 - bebida.rating)}</p>
+							<p>${bebida.precio}</p>
+						</div>
 					</div>
-				</div>
-			))}
+				))}
+			</div>
+			<button
+				className="botonPago"
+				onClick={() => navigate("/pago")}
+			>
+				Ir a pagar
+			</button>
 		</div>
 	);
 };

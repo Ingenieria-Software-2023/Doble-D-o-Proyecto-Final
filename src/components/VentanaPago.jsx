@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const VentanaPago = ({ orden }) => {
+	const navigate = useNavigate();
+
 	const [metodoPago, setMetodoPago] = useState("");
 	const [datosTarjeta, setDatosTarjeta] = useState({
 		numeroTarjeta: "",
@@ -109,6 +112,8 @@ const VentanaPago = ({ orden }) => {
 			>
 				Pagar
 			</button>
+
+			<button onClick={() => navigate("/retroalimentacion")}>Pagar</button>
 		</div>
 	);
 };

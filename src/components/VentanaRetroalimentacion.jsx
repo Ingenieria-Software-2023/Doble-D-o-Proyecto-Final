@@ -31,9 +31,8 @@ const VentanaRetroalimentacion = () => {
 	};
 
 	const enviarCalificacion = () => {
-		// Aquí iría la lógica para enviar los datos al servidor
 		alert("Calificaciones enviadas con éxito");
-		navigate("/"); // Redirigir al menú principal
+		navigate("/"); // Redirige al menú principal
 	};
 
 	return (

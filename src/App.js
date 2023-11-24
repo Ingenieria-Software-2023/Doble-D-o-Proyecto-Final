@@ -5,7 +5,6 @@ import { BebidaSeleccionadaProvider } from "./BebidaSeleccionadaContext";
 import { OrdenProvider } from "./OrdenContexto";
 import { UsuarixsProvider } from "./UsuarixsContexto";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/BarraNavegacion";
 import CatalogoBebidas from "./components/CatalogoBebidas";
 import MetodosPago from "./components/VentanaPago";
 import Retroalimentacion from "./components/VentanaRetroalimentacion";

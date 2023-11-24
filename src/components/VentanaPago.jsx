@@ -1,6 +1,13 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { ContextoOrden } from "../OrdenContexto";
+import "./VentanaPago.css";
 
-const VentanaPago = ({ orden }) => {
+const VentanaPago = () => {
+	const navigate = useNavigate();
+	const { orden } = useContext(ContextoOrden); // Así obtienes `orden` del contexto
+	const [visualCardNumber, setVisualCardNumber] = useState("");
+
 	const [metodoPago, setMetodoPago] = useState("");
 	const [datosTarjeta, setDatosTarjeta] = useState({
 		numeroTarjeta: "",
@@ -23,6 +30,17 @@ const VentanaPago = ({ orden }) => {
 		}));
 	};
 
+	const handleCardNumberChange = (e) => {
+		const { value } = e.target;
+		// Actualiza el estado de datos de la tarjeta con el número real
+		setDatosTarjeta((prev) => ({
+			...prev,
+			numeroTarjeta: value,
+		}));
+		// Actualiza el estado visual con asteriscos y los últimos 4 dígitos
+		setVisualCardNumber(value.slice(0, -4).replace(/./g, "*") + value.slice(-4));
+	};
+
 	const handlePagar = () => {
 		// Aquí colocarías la lógica de pago o redirección a otra página
 		alert("Procesando pago...");
@@ -40,11 +58,26 @@ const VentanaPago = ({ orden }) => {
 	};
 
 	return (
-		<div>
+		<div className="ventana-pago">
 			{/* Resumen de la orden */}
-			<h2>Resumen de la Orden</h2>
-			{/* Aquí mostrarías la lista de la orden con sus precios */}
-			<p>Total a Pagar: ${totalPagar}</p>
+			<div>
+				<h2>Resumen de la Orden</h2>
+				{orden.length > 0 ? (
+					<ul>
+						{orden.map((item, index) => (
+							<li key={index}>
+								{item.nombre} - {item.opcionesPersonalizacion.tamano}, {item.opcionesPersonalizacion.tipoLeche},{" "}
+								{item.opcionesPersonalizacion.edulcorante}
+								<br />
+								Precio: ${item.precio}
+							</li>
+						))}
+					</ul>
+				) : (
+					<p>No hay bebidas en tu pedido.</p>
+				)}
+			</div>
+			<p>Total a Pagar: ${totalPagar} MXN</p>
 
 			{/* Selección del método de pago */}
 			<select
@@ -62,11 +95,11 @@ const VentanaPago = ({ orden }) => {
 
 			{/* Formulario para pagos con tarjeta */}
 			{metodoPago === "tarjeta" && (
-				<div>
+				<div className="pagoTarjeta">
 					<input
 						name="numeroTarjeta"
-						value={datosTarjeta.numeroTarjeta}
-						onChange={handleInputTarjeta}
+						value={visualCardNumber}
+						onChange={handleCardNumberChange}
 						placeholder="Número de Tarjeta"
 					/>
 					<input
@@ -97,7 +130,7 @@ const VentanaPago = ({ orden }) => {
 						<option value="solana">Solana</option>
 						<option value="ethereum">Ethereum</option>
 					</select>
-					{cryptoSeleccionada && <p>Dirección: {`hashed_address_for_${cryptoSeleccionada}`}</p>}
+					{cryptoSeleccionada && <p>Depositar a: {`3dvs9t45s34wet6b3dtg8${cryptoSeleccionada}`}</p>}
 				</div>
 			)}
 
@@ -108,6 +141,13 @@ const VentanaPago = ({ orden }) => {
 				disabled={!esPagoValido()}
 			>
 				Pagar
+			</button>
+
+			<button
+				className="botonMenu"
+				onClick={() => navigate("/")}
+			>
+				Ir al menú
 			</button>
 		</div>
 	);

@@ -1,10 +1,12 @@
 # Doble-Dúo-Proyecto-Final
 Repositorio del equipo Doble Dúo
-- [Metodologia](#Metodologia)
+- [Metodología](#Metodología)
 - [Casos de uso](#Casos-de-uso)
 - [Arquitectura](#Arquitectura)
+- [Página](#Página)
+- [Presentación](#Presentación)
   
-## Metodologia 
+## Metodología 
 Dada la naturaleza de los requerimientos presentados, una metodología de desarrollo ágil sería la más adecuada. Entre las metodologías Agiles, consideramos que Scrum es la mejor para este proyecto.
 
 La metodologia Scrum promueve una colaboración constante con el cliente. Esto significa que podemos definir y ajustar los requerimientos a lo largo del proyecto, asegurando que la aplicación cumpla con las expectativas y necesidades del usuario final. Ademas, dado que Agile se centra en iteraciones rápidas, se puede desarrollar y probar la aplicación en diferentes plataformas (iOS y Android) de manera simultánea, garantizando una interfaz adaptativa y amigable. 
@@ -111,6 +113,15 @@ La arquitectura de microservicios nos permite realizar actualizaciones y mejoras
 El siguiente diagrama es el que se utilizó como referencia para desarrollarlo, en donde los client requests se efectúan al ingresar a la aplicación, pedir una bebida o hacer el pago. De todas estos requests se van a responder en la aplicación con los diferentes servicios que se necesitan para dar estas funcionalidades.
 
 ![image](https://github.com/Ingenieria-Software-2023/Doble-Duo-Proyecto-Final/assets/91972908/e0d16335-bb13-4ac6-a81e-633d5864cefd)
+
+## Presentación
+
+https://docs.google.com/presentation/d/1f0TbVXTB654E0m12eRRr7xBGHUYxQ5HFJPCpvlkqKDE/edit#slide=id.p
+
+## Página
+
+[cafeduo.netlify.app](https://cafeduo.netlify.app/)https://cafeduo.netlify.app/
+
 
  
 

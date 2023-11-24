@@ -1,13 +1,14 @@
 import React, { useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { ContextoBebidaSeleccionada } from "../BebidaSeleccionadaContext";
 import { ContextoOrden } from "../OrdenContexto";
 import "./PersonalizacionBebidas.css";
-import { useNavigate } from "react-router-dom";
 
 const PersonalizacionBebidas = () => {
+	const navigate = useNavigate();
+
 	const { bebidaSeleccionada } = useContext(ContextoBebidaSeleccionada);
 	const { orden, addToOrder } = useContext(ContextoOrden);
-	const navigate = useNavigate();
 	const [opcionesPersonalizacion, setOpcionesPersonalizacion] = useState({
 		tamano: "Mediano",
 		tipoLeche: "entera",
@@ -100,7 +101,12 @@ const PersonalizacionBebidas = () => {
 					</select>
 				</div>
 
-				<button onClick={manejarAgregarOrden}>Añadir a la orden</button>
+				<button
+					className="botonAgregarBebida"
+					onClick={manejarAgregarOrden}
+				>
+					Añadir a la orden
+				</button>
 				<br></br>
 				{/* Estado actual de la orden */}
 				<div className="orden-actual-personalizacion">
@@ -118,6 +124,18 @@ const PersonalizacionBebidas = () => {
 						<p>No hay bebidas en tu orden.</p>
 					)}
 				</div>
+				<button
+					className="botonPago"
+					onClick={() => navigate("/pago")}
+				>
+					Ir a pagar
+				</button>
+				<button
+					className="botonMenu"
+					onClick={() => navigate("/")}
+				>
+					Ir al menú
+				</button>
 			</div>
 			<button
 				className="botonMenu"

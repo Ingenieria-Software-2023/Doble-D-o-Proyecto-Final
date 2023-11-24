@@ -1,8 +1,8 @@
 import React, { useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { ContextoBebidaSeleccionada } from "../BebidaSeleccionadaContext";
 import { ContextoOrden } from "../OrdenContexto";
 import "./PersonalizacionBebidas.css";
-import { useNavigate } from "react-router-dom";
 
 const PersonalizacionBebidas = () => {
 	const { bebidaSeleccionada } = useContext(ContextoBebidaSeleccionada);

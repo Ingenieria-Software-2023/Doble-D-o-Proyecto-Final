@@ -3,14 +3,12 @@ import { useNavigate } from "react-router-dom";
 import { ContextoBebidaSeleccionada } from "../BebidaSeleccionadaContext";
 import { ContextoOrden } from "../OrdenContexto";
 import "./PersonalizacionBebidas.css";
-import { useNavigate } from "react-router-dom";
 
 const PersonalizacionBebidas = () => {
 	const navigate = useNavigate();
 
 	const { bebidaSeleccionada } = useContext(ContextoBebidaSeleccionada);
 	const { orden, addToOrder } = useContext(ContextoOrden);
-	const navigate = useNavigate();
 	const [opcionesPersonalizacion, setOpcionesPersonalizacion] = useState({
 		tamano: "Mediano",
 		tipoLeche: "entera",

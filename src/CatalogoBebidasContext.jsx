@@ -56,5 +56,27 @@ export const ContextoBebidas = createContext();
 
 // Proveedor del contexto
 export const BebidasProvider = ({ children }) => {
-	return <ContextoBebidas.Provider value={{ bebidas }}>{children}</ContextoBebidas.Provider>;
+	const [bebidasState, setBebidasState] = useState(
+		bebidas.map((bebida) => ({
+			...bebida,
+			calificacionesIndividuales: [], // Inicializar un arreglo vacío para cada bebida
+		})),
+	);
+
+	const updateRating = (id, newRating) => {
+		setBebidasState((currentBebidas) =>
+			currentBebidas.map((bebida) => {
+				if (bebida.id === id) {
+					const newRatingsArray = [...bebida.calificacionesIndividuales, newRating];
+					const updatedRating = newRatingsArray.reduce((a, b) => a + b, 0) / newRatingsArray.length;
+					return { ...bebida, rating: updatedRating, calificacionesIndividuales: newRatingsArray };
+				}
+				return bebida;
+			}),
+		);
+	};
+
+	return (
+		<ContextoBebidas.Provider value={{ bebidas: bebidasState, updateRating }}>{children}</ContextoBebidas.Provider>
+	);
 };

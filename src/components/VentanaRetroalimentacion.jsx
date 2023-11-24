@@ -1,11 +1,15 @@
 import React, { useContext, useState } from "react";
 import { ContextoOrden } from "../OrdenContexto";
+import { ContextoBebidas } from "../CatalogoBebidasContext";
+
 import { useNavigate } from "react-router-dom";
 import "./VentanaRetroalimentacion.css"; // Asegúrate de crear este archivo CSS
 
 const VentanaRetroalimentacion = () => {
 	const navigate = useNavigate();
 	const { orden } = useContext(ContextoOrden);
+	const { updateRating } = useContext(ContextoBebidas);
+
 	const [comentarios, setComentarios] = useState(
 		orden.map((item) => ({
 			id: item.id,
@@ -23,6 +27,9 @@ const VentanaRetroalimentacion = () => {
 	};
 
 	const enviarCalificacion = () => {
+		comentarios.forEach((comentario) => {
+			updateRating(comentario.id, comentario.calificacion);
+		});
 		alert("Calificaciones enviadas con éxito");
 		navigate("/menu"); // Redirigir al menú principal
 	};

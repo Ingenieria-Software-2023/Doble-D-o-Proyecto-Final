@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { ContextoOrden } from "../OrdenContexto";
 
-const VentanaPago = ({ orden }) => {
+const VentanaPago = () => {
 	const navigate = useNavigate();
+	const { orden } = useContext(ContextoOrden); // Así obtienes `orden` del contexto
 
 	const [metodoPago, setMetodoPago] = useState("");
 	const [datosTarjeta, setDatosTarjeta] = useState({

@@ -1,13 +1,13 @@
 import React, { useContext, useState } from "react";
 import { ContextoBebidaSeleccionada } from "../BebidaSeleccionadaContext";
 import { ContextoOrden } from "../OrdenContexto";
-import "./PersonalizacionBebidas.css"; // Asegúrate de que el archivo CSS se importe correctamente
+import "./PersonalizacionBebidas.css";
 
 const PersonalizacionBebidas = () => {
 	const { bebidaSeleccionada } = useContext(ContextoBebidaSeleccionada);
 	const { orden, addToOrder } = useContext(ContextoOrden);
 	const [opcionesPersonalizacion, setOpcionesPersonalizacion] = useState({
-		tamano: "Mediano", // Valor predeterminado
+		tamano: "Mediano",
 		tipoLeche: "entera",
 		edulcorante: "azúcar",
 	});
@@ -27,14 +27,10 @@ const PersonalizacionBebidas = () => {
 	const manejarAgregarOrden = () => {
 		const bebidaConPersonalizacion = {
 			...bebidaSeleccionada,
-			opcionesPersonalizacion, // La estructura ya coincide
+			opcionesPersonalizacion,
 		};
 		addToOrder(bebidaConPersonalizacion);
 	};
-
-	if (!bebidaSeleccionada) {
-		return <div>Seleccione una bebida para personalizar.</div>;
-	}
 
 	return (
 		<div className="personalizacion-bebidas">
@@ -84,11 +80,10 @@ const PersonalizacionBebidas = () => {
 						<option value="soya">Leche de soya</option>
 						<option value="nuez">Leche de nuez</option>
 						<option value="light">Leche light</option>
-						{/* otras opciones */}
 					</select>
 				</div>
 
-				{/* Selección de edulcorante */}
+				{/* Selección de endulzante */}
 				<div>
 					<label htmlFor="edulcorante">Endulzante:</label>
 					<select

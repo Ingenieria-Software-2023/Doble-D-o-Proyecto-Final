@@ -25,12 +25,16 @@ function App() {
 								path="/personalizacion"
 								element={<PersonalizacionBebidas />}
 							/>
+							<Route
+								path="/pago"
+								element={<MetodosPago />}
+							/>
 						</Routes>
 					</Router>
 					{/* <div className="App">
 					{/* <Navbar />
 					<CatalogoBebidas /> */}
-					{/* <MetodosPago />
+					{/* 
 					<Retroalimentacion />
 					<PersonalizacionBebidas /> */}
 					{/* </div>*/}

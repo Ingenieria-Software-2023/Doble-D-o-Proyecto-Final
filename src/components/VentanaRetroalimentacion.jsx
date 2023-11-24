@@ -3,27 +3,35 @@ import { ContextoOrden } from "../OrdenContexto";
 import { ContextoBebidas } from "../CatalogoBebidasContext";
 
 import { useNavigate } from "react-router-dom";
-import "./VentanaRetroalimentacion.css"; // Asegúrate de crear este archivo CSS
+import "./VentanaRetroalimentacion.css";
+
+const agruparBebidasPorNombre = (orden) => {
+	const grupos = {};
+	orden.forEach((item) => {
+		if (!grupos[item.nombre]) {
+			grupos[item.nombre] = {
+				nombre: item.nombre,
+				comentario: "",
+				calificacion: 0,
+			};
+		}
+	});
+	return Object.values(grupos);
+};
 
 const VentanaRetroalimentacion = () => {
 	const navigate = useNavigate();
-	const { orden } = useContext(ContextoOrden);
+	const { orden, clearOrder } = useContext(ContextoOrden);
 	const { updateRating } = useContext(ContextoBebidas);
 
-	const [comentarios, setComentarios] = useState(
-		orden.map((item) => ({
-			id: item.id,
-			comentario: "",
-			calificacion: 0,
-		})),
-	);
+	const [comentarios, setComentarios] = useState(agruparBebidasPorNombre(orden));
 
-	const actualizarComentario = (id, comentario) => {
-		setComentarios(comentarios.map((item) => (item.id === id ? { ...item, comentario } : item)));
+	const actualizarComentario = (nombre, comentario) => {
+		setComentarios(comentarios.map((item) => (item.nombre === nombre ? { ...item, comentario } : item)));
 	};
 
-	const actualizarCalificacion = (id, calificacion) => {
-		setComentarios(comentarios.map((item) => (item.id === id ? { ...item, calificacion } : item)));
+	const actualizarCalificacion = (nombre, calificacion) => {
+		setComentarios(comentarios.map((item) => (item.nombre === nombre ? { ...item, calificacion } : item)));
 	};
 
 	const enviarCalificacion = () => {
@@ -32,6 +40,7 @@ const VentanaRetroalimentacion = () => {
 		});
 		alert("Calificaciones enviadas con éxito");
 		navigate("/menu"); // Redirigir al menú principal
+		clearOrder();
 	};
 
 	return (
@@ -42,10 +51,10 @@ const VentanaRetroalimentacion = () => {
 					key={index}
 					className="item-retroalimentacion"
 				>
-					<h3>{orden[index].nombre}</h3>
+					<h3>{item.nombre}</h3>
 					<textarea
 						value={item.comentario}
-						onChange={(e) => actualizarComentario(item.id, e.target.value)}
+						onChange={(e) => actualizarComentario(item.nombre, e.target.value)}
 						placeholder="Escribe tu comentario aquí"
 					/>
 					<div className="estrellas">
@@ -53,7 +62,7 @@ const VentanaRetroalimentacion = () => {
 							<span
 								key={i}
 								className={item.calificacion > i ? "filled" : ""}
-								onClick={() => actualizarCalificacion(item.id, i + 1)}
+								onClick={() => actualizarCalificacion(item.nombre, i + 1)}
 							>
 								★
 							</span>

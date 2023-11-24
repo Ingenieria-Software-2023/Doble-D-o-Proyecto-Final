@@ -29,6 +29,10 @@ function App() {
 								path="/pago"
 								element={<MetodosPago />}
 							/>
+							<Route
+								path="/retroalimentacion"
+								element={<Retroalimentacion />}
+							/>
 						</Routes>
 					</Router>
 					{/* <div className="App">

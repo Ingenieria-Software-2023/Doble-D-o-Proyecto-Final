@@ -1,12 +1,12 @@
 # Doble-Dúo-Proyecto-Final
 Repositorio del equipo Doble Dúo
-- [Metodologia](#Metodologia)
+- [Metodología](#Metodología)
 - [Casos de uso](#Casos-de-uso)
 - [Arquitectura](#Arquitectura)
 - [Página](#Página)
 - [Presentación](#Presentación)
   
-## Metodologia 
+## Metodología 
 Dada la naturaleza de los requerimientos presentados, una metodología de desarrollo ágil sería la más adecuada. Entre las metodologías Agiles, consideramos que Scrum es la mejor para este proyecto.
 
 La metodologia Scrum promueve una colaboración constante con el cliente. Esto significa que podemos definir y ajustar los requerimientos a lo largo del proyecto, asegurando que la aplicación cumpla con las expectativas y necesidades del usuario final. Ademas, dado que Agile se centra en iteraciones rápidas, se puede desarrollar y probar la aplicación en diferentes plataformas (iOS y Android) de manera simultánea, garantizando una interfaz adaptativa y amigable. 

@@ -9,7 +9,7 @@ const PersonalizacionBebidas = () => {
 	const [opcionesPersonalizacion, setOpcionesPersonalizacion] = useState({
 		tamano: "Mediano",
 		tipoLeche: "entera",
-		edulcorante: "azúcar",
+		endulzante: "azúcar",
 	});
 
 	const manejarCambioTamano = (evento) => {

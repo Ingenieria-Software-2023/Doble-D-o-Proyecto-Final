@@ -5,7 +5,7 @@ import "./VentanaPago.css";
 
 const VentanaPago = () => {
 	const navigate = useNavigate();
-	const { orden } = useContext(ContextoOrden); // Así obtienes `orden` del contexto
+	const { orden } = useContext(ContextoOrden);
 	const [visualCardNumber, setVisualCardNumber] = useState("");
 
 	const [metodoPago, setMetodoPago] = useState("");
@@ -44,7 +44,7 @@ const VentanaPago = () => {
 	const handlePagar = () => {
 		alert("Procesando pago...");
 		// Redirección a retroalimentación
-		window.location.href = "/retroalimentacion";
+		navigate("/retroalimentacion");
 	};
 
 	const esPagoValido = () => {
@@ -144,7 +144,7 @@ const VentanaPago = () => {
 
 			<button
 				className="botonMenu"
-				onClick={() => navigate("/")}
+				onClick={() => navigate("/menu")}
 			>
 				Ir al menú
 			</button>

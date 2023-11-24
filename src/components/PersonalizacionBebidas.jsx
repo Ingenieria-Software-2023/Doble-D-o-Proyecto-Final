@@ -132,7 +132,7 @@ const PersonalizacionBebidas = () => {
 				</button>
 				<button
 					className="botonMenu"
-					onClick={() => navigate("/")}
+					onClick={() => navigate("/menu")}
 				>
 					Ir al menú
 				</button>

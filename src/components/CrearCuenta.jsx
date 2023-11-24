@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useUsuarixs } from "../UsuarixsContexto";
 import { useNavigate } from "react-router-dom";
+import "./InicioSesion.css";
 
 const CrearCuenta = () => {
 	const [usuarix, setUsuarix] = useState("");
@@ -15,24 +16,29 @@ const CrearCuenta = () => {
 	};
 
 	return (
-		<form onSubmit={manejarCreacion}>
-			<label>
-				Usuarix:
-				<input
-					value={usuarix}
-					onChange={(e) => setUsuarix(e.target.value)}
-				/>
-			</label>
-			<label>
-				Contraseña:
-				<input
-					type="password"
-					value={contraseña}
-					onChange={(e) => setContraseña(e.target.value)}
-				/>
-			</label>
-			<button type="submit">Crear cuenta</button>
-		</form>
+		<div className="form-container">
+			<form
+				onSubmit={manejarCreacion}
+				className="formulario"
+			>
+				<label>
+					Usuarix:
+					<input
+						value={usuarix}
+						onChange={(e) => setUsuarix(e.target.value)}
+					/>
+				</label>
+				<label>
+					Contraseña:
+					<input
+						type="password"
+						value={contraseña}
+						onChange={(e) => setContraseña(e.target.value)}
+					/>
+				</label>
+				<button type="submit">Crear cuenta</button>
+			</form>
+		</div>
 	);
 };
 

@@ -1,0 +1,52 @@
+/* Esto centrará todo el contenido del formulario vertical y horizontalmente */
+.form-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh; /* Esto hace que tome toda la altura de la pantalla */
+}
+
+.formulario {
+	border: 1px solid #ddd; /* Borde gris */
+	padding: 2em; /* Espaciado interno */
+	border-radius: 10px; /* Bordes redondeados */
+	width: 100%;
+	max-width: 400px; /* Ancho máximo para dispositivos grandes */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+	background: white; /* Fondo blanco para el formulario */
+}
+
+.formulario label,
+.formulario input,
+.formulario button,
+.formulario p {
+	display: block; /* Hace que cada elemento ocupe su propia línea */
+	width: 100%;
+	margin-bottom: 1em; /* Espacio entre elementos del formulario */
+}
+
+.formulario input,
+.formulario button {
+	padding: 0.5em; /* Espaciado interno para input y botón */
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+.formulario button {
+	background-color: #4caf50; /* Fondo verde para el botón */
+	color: white;
+	cursor: pointer;
+}
+
+.formulario button:hover {
+	background-color: #45a049; /* Color ligeramente más oscuro al pasar el mouse */
+}
+
+.formulario a {
+	color: #4caf50; /* Color verde para los enlaces, similar al botón */
+	text-decoration: none; /* Elimina el subrayado de los enlaces */
+}
+
+.formulario a:hover {
+	text-decoration: underline; /* Subraya el enlace al pasar el mouse */
+}

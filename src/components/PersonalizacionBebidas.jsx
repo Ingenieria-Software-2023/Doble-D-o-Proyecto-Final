@@ -46,6 +46,12 @@ const PersonalizacionBebidas = () => {
 				<h2>{bebidaSeleccionada.nombre}</h2>
 				<p>Rating: {"★".repeat(bebidaSeleccionada.rating)}</p>
 				<p>Precio: ${bebidaSeleccionada.precio}</p>
+
+				<img
+					src={bebidaSeleccionada.infoNutricional}
+					alt={bebidaSeleccionada.nombre}
+					className="imagen-infoNutricional"
+				/>
 			</div>
 			<div className="formulario-orden-personalizacion">
 				<h2>Personaliza tu bebida: {bebidaSeleccionada.nombre}</h2>

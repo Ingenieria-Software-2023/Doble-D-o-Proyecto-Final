@@ -16,7 +16,7 @@ Finalmente para la dinamica del trabajo, se implementaria el uso de sprints. Al 
 
 ## Casos de uso
 
-### Plataformas y Usabilidad:
+### Plataformas y Usabilidad:La aplicación estará diseñada para ofrecer una experiencia de usuario coherente y eficiente en múltiples plataformas. 
 
 #### Caso de Uso: App en Android sin Cuenta Vinculada
 
@@ -30,7 +30,7 @@ Descripción: Similar al caso de Android, este caso de uso aborda la situación 
 
 Descripción: Este caso de uso es eficiente al mostrar rápidamente una pantalla de bienvenida y luego dirigirse a la pantalla principal para la selección de bebidas. La sincronización de la experiencia entre Android e iOS, especialmente para usuarios con cuentas vinculadas, mejora la coherencia y la facilidad de uso.
 
-### Catálogo de Bebidas:
+### Catálogo de Bebidas:La aplicación contará con un catálogo completo de bebidas que ofrecerá a los usuarios una amplia variedad de opciones. Las bebidas se organizarán de manera intuitiva. 
 
 #### Caso de Uso: Mostrar Bebidas
 
@@ -58,7 +58,7 @@ Descripción: Este caso de uso aborda la opción de pago con criptomonedas de ma
 
 Descripción: Este caso de uso considera el pago en efectivo de manera práctica. El envío de un mensaje al cajero/cajera con la información del pedido y el nombre del usuario facilita la coordinación del pago.
 
-### Evaluación y Retroalimentación: se evaluarán distintas características como: atención, los productos ordenados, limpieza del lugar, tiempo de entrega, etc… También se le dará la opción de que deje una nota al final de la evaluación la cual será evaluada para mejorar nuestro servicio o mantenerlo en caso de que sea una evaluación positiva.
+### Evaluación y Retroalimentación: Se evaluarán distintas características como: atención, los productos ordenados, limpieza del lugar, tiempo de entrega, etc… También se le dará la opción de que deje una nota al final de la evaluación la cual será evaluada para mejorar nuestro servicio o mantenerlo en caso de que sea una evaluación positiva.
 
 #### Caso de Uso: Evaluación mediante Notificación
 
@@ -72,7 +72,7 @@ Descripción: Este caso de uso es práctico al proporcionar otra oportunidad par
 
 Descripción: Los usuarios tendrán la opción de proporcionar retroalimentación personalizada en cualquier momento, no solo después de la entrega. En la sección de retroalimentación, podrán escribir comentarios específicos sobre aspectos que deseen destacar, sugerencias para mejorar, o cualquier otra información que deseen compartir. Esta retroalimentación personalizada se recopilará de manera anónima para su análisis.
 
-### Personalización de Bebidas:
+### Personalización de Bebidas: El sistema permitirá a los usuarios personalizar sus bebidas según sus preferencias individuales. Esto incluirá la capacidad de elegir ingredientes específicos, ajustar el tamaño de la bebida y la temperatura deseada.
 
 #### Caso de Uso: Personalización de Ingredientes
 

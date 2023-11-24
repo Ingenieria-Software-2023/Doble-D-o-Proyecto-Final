@@ -6,6 +6,7 @@ import "./VentanaPago.css";
 const VentanaPago = () => {
 	const navigate = useNavigate();
 	const { orden } = useContext(ContextoOrden); // Así obtienes `orden` del contexto
+	const [visualCardNumber, setVisualCardNumber] = useState("");
 
 	const [metodoPago, setMetodoPago] = useState("");
 	const [datosTarjeta, setDatosTarjeta] = useState({
@@ -29,6 +30,17 @@ const VentanaPago = () => {
 		}));
 	};
 
+	const handleCardNumberChange = (e) => {
+		const { value } = e.target;
+		// Actualiza el estado de datos de la tarjeta con el número real
+		setDatosTarjeta((prev) => ({
+			...prev,
+			numeroTarjeta: value,
+		}));
+		// Actualiza el estado visual con asteriscos y los últimos 4 dígitos
+		setVisualCardNumber(value.slice(0, -4).replace(/./g, "*") + value.slice(-4));
+	};
+
 	const handlePagar = () => {
 		// Aquí colocarías la lógica de pago o redirección a otra página
 		alert("Procesando pago...");
@@ -48,7 +60,6 @@ const VentanaPago = () => {
 	return (
 		<div className="ventana-pago">
 			{/* Resumen de la orden */}
-
 			<div>
 				<h2>Resumen de la Orden</h2>
 				{orden.length > 0 ? (
@@ -66,7 +77,7 @@ const VentanaPago = () => {
 					<p>No hay bebidas en tu pedido.</p>
 				)}
 			</div>
-			<p>Total a Pagar: ${totalPagar}</p>
+			<p>Total a Pagar: ${totalPagar} MXN</p>
 
 			{/* Selección del método de pago */}
 			<select
@@ -87,8 +98,8 @@ const VentanaPago = () => {
 				<div className="pagoTarjeta">
 					<input
 						name="numeroTarjeta"
-						value={datosTarjeta.numeroTarjeta}
-						onChange={handleInputTarjeta}
+						value={visualCardNumber}
+						onChange={handleCardNumberChange}
 						placeholder="Número de Tarjeta"
 					/>
 					<input

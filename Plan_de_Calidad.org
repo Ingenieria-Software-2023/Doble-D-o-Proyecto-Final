@@ -1,4 +1,4 @@
-* Plan de Calidad - Aplicación de Cafetería Universitaria
+* Plan de Calidad
 
 La aplicación se desarrollará utilizando la metodología Scrum y una arquitectura de microservicios para proporcionar una experiencia óptima al usuario en la cafetería universitaria. El enfoque principal se centra en la usabilidad, personalización de bebidas, métodos de pago, evaluación continua y mantenimiento adaptable.
 

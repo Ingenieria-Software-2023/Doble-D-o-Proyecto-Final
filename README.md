@@ -3,6 +3,7 @@ Repositorio del equipo Doble Dúo
 - [Metodologia](#Metodologia)
 - [Casos de uso](#Casos-de-uso)
 - [Arquitectura](#Arquitectura)
+- [Presentación](#Presentación)
   
 ## Metodologia 
 Dada la naturaleza de los requerimientos presentados, una metodología de desarrollo ágil sería la más adecuada. Entre las metodologías Agiles, consideramos que Scrum es la mejor para este proyecto.
@@ -111,6 +112,10 @@ La arquitectura de microservicios nos permite realizar actualizaciones y mejoras
 El siguiente diagrama es el que se utilizó como referencia para desarrollarlo, en donde los client requests se efectúan al ingresar a la aplicación, pedir una bebida o hacer el pago. De todas estos requests se van a responder en la aplicación con los diferentes servicios que se necesitan para dar estas funcionalidades.
 
 ![image](https://github.com/Ingenieria-Software-2023/Doble-Duo-Proyecto-Final/assets/91972908/e0d16335-bb13-4ac6-a81e-633d5864cefd)
+
+## Presentación
+
+https://docs.google.com/presentation/d/1f0TbVXTB654E0m12eRRr7xBGHUYxQ5HFJPCpvlkqKDE/edit#slide=id.p
 
  
 

@@ -35,13 +35,6 @@ function App() {
 							/>
 						</Routes>
 					</Router>
-					{/* <div className="App">
-					{/* <Navbar />
-					<CatalogoBebidas /> */}
-					{/* 
-					<Retroalimentacion />
-					<PersonalizacionBebidas /> */}
-					{/* </div>*/}
 				</OrdenProvider>
 			</BebidaSeleccionadaProvider>
 		</BebidasProvider>

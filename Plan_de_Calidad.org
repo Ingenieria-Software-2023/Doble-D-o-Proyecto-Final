@@ -21,7 +21,7 @@ La aplicación se desarrollará utilizando la metodología Scrum y una arquitect
 - Evaluación y Retroalimentación: Pruebas de encuestas, historial de pedidos y retroalimentación personalizada.
 - Arquitectura de Microservicios: Pruebas de funcionalidad, pruebas de escalabilidad y resistencia a fallos.
 
-** Funcionalidades que No se Van a Probar
+** Funcionalidades que no se van a probar
 - Compatibilidad con Versiones Antiguas: Debido a la adopción de tecnologías actuales, no se probará en versiones de sistemas operativos obsoletos.
 
 ** Estrategia

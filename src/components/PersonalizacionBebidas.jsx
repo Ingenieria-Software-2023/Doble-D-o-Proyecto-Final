@@ -38,7 +38,7 @@ const PersonalizacionBebidas = () => {
 
 	return (
 		<div className="personalizacion-bebidas">
-			<div className="info-bebida">
+			<div className="info-bebida-personalizacion">
 				<img
 					src={bebidaSeleccionada.imagen}
 					alt={bebidaSeleccionada.nombre}
@@ -48,7 +48,7 @@ const PersonalizacionBebidas = () => {
 				<p>Rating: {"★".repeat(bebidaSeleccionada.rating)}</p>
 				<p>Precio: ${bebidaSeleccionada.precio}</p>
 			</div>
-			<div className="formulario-orden">
+			<div className="formulario-orden-personalizacion">
 				<h2>Personaliza tu bebida: {bebidaSeleccionada.nombre}</h2>
 
 				{/* Selección de tamaño */}
@@ -106,7 +106,7 @@ const PersonalizacionBebidas = () => {
 				<button onClick={manejarAgregarOrden}>Añadir a la orden</button>
 				<br></br>
 				{/* Estado actual de la orden */}
-				<div className="orden-actual">
+				<div className="orden-actual-personalizacion">
 					<h3>Orden actual:</h3>
 					{orden.length > 0 ? (
 						<ul>

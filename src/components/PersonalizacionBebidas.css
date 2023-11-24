@@ -6,17 +6,17 @@
 	padding: 20px; /* Espacio alrededor de todo el contenido */
 }
 
-.info-bebida {
+.info-bebida-personalizacion {
 	flex: 1; /* Permite que el contenido de la bebida crezca pero con un límite */
-	max-width: 200px; /* Establece un ancho máximo para la imagen y su contenedor */
+	width: 100%;
 }
 
-.imagen-bebida {
+.imagen-bebida-personalizacion {
 	width: 100%; /* Hace que la imagen ocupe todo el ancho de su contenedor */
 	height: auto; /* Mantiene la proporción de la imagen */
 }
 
-.formulario-orden {
+.formulario-orden-personalizacion {
 	flex: 2; /* Permite que el formulario ocupe el doble de espacio que la imagen */
 	max-width: calc(100% - 220px); /* Ocupa el espacio restante, restando el ancho de la imagen y el gap */
 }
@@ -49,17 +49,17 @@ form button:hover {
 	background-color: #45a049;
 }
 
-.orden-actual {
+.orden-actual-personalizacion {
 	margin-top: 20px;
 }
 
 /* Estilos adicionales para la lista de la orden */
-.orden-actual ul {
+.orden-actual-personalizacion ul {
 	list-style: none;
 	padding: 0;
 }
 
-.orden-actual li {
+.orden-actual-personalizacion li {
 	background-color: #f7f7f7;
 	border: 1px solid #ddd;
 	padding: 10px;

@@ -1,8 +1,8 @@
 import React, { useContext, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { ContextoBebidaSeleccionada } from "../BebidaSeleccionadaContext";
 import { ContextoOrden } from "../OrdenContexto";
 import "./PersonalizacionBebidas.css";
-import { useNavigate } from "react-router-dom";
 
 const PersonalizacionBebidas = () => {
 	const navigate = useNavigate();
@@ -137,6 +137,12 @@ const PersonalizacionBebidas = () => {
 					Ir al menú
 				</button>
 			</div>
+			<button
+				className="botonMenu"
+				onClick={() => navigate("/retroalimentacion")}
+			>
+				Calif
+			</button>
 		</div>
 	);
 };

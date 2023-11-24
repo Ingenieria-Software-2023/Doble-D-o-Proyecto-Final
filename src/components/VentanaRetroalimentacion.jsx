@@ -1,5 +1,7 @@
 import React, { useContext, useState } from "react";
 import { ContextoOrden } from "../OrdenContexto";
+import { ContextoBebidas } from "../CatalogoBebidasContext";
+
 import { useNavigate } from "react-router-dom";
 import "./VentanaRetroalimentacion.css";
 
@@ -19,7 +21,9 @@ const agruparBebidasPorNombre = (orden) => {
 
 const VentanaRetroalimentacion = () => {
 	const navigate = useNavigate();
-	const { orden } = useContext(ContextoOrden);
+	const { orden, clearOrder } = useContext(ContextoOrden);
+	const { updateRating } = useContext(ContextoBebidas);
+
 	const [comentarios, setComentarios] = useState(agruparBebidasPorNombre(orden));
 
 	const actualizarComentario = (nombre, comentario) => {
@@ -31,8 +35,12 @@ const VentanaRetroalimentacion = () => {
 	};
 
 	const enviarCalificacion = () => {
+		comentarios.forEach((comentario) => {
+			updateRating(comentario.id, comentario.calificacion);
+		});
 		alert("Calificaciones enviadas con éxito");
-		navigate("/"); // Redirige al menú principal
+		navigate("/menu"); // Redirigir al menú principal
+		clearOrder();
 	};
 
 	return (

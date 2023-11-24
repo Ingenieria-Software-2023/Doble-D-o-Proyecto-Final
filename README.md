@@ -121,6 +121,7 @@ https://docs.google.com/presentation/d/1f0TbVXTB654E0m12eRRr7xBGHUYxQ5HFJPCpvlkq
 ## Página
 
 [cafeduo.netlify.app](https://cafeduo.netlify.app/)https://cafeduo.netlify.app/
+Parece haber un problema con la de crear cuenta, puden usar marielsgtzz@gmail.com 123Mariel:) en lo que se arregla.
 
 
  
